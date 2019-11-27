@@ -1,0 +1,40 @@
+
+/* Title Banner
+----------------------------------- */
+
+.title-banner{
+    background-color: $brand-six;
+    padding: 3rem 0 2rem;
+    margin-bottom: 15px;
+
+    &__heading{
+        margin-bottom: 1rem;
+
+        strong{
+            display: block;
+        }
+    }
+
+    @include media(sm){
+        margin-bottom: 8px;
+    }
+
+    @include media(xs){
+        padding-left: 2rem;
+    }
+
+    h1, h3{
+        color: $brand-two;
+    }
+
+    &.vc_row[data-vc-full-width]{
+
+        &:before,
+        &:after{
+            display: none;
+        }
+    }
+}
+
+/* Title Banner [END]
+----------------------------------- */

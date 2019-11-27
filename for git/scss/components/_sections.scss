@@ -1,0 +1,49 @@
+
+/* Sections
+----------------------------------- */
+
+.section{
+    background-color: $brand-twelve;
+    margin: 15px 30px;
+    padding: 6rem 0 5rem;
+
+    @include media(md){
+        margin: 8px 15px;
+        padding: 4rem 0 3rem;
+    }
+
+    &__title{
+        position: relative;
+        margin-bottom: 4rem;
+
+        &:before{
+            font-family: 'fontello';
+            font-size: 1.4em;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            margin-right: 1rem;
+            line-height: 0;
+        }
+    }
+
+    &.basic-page-section{
+        padding-top: 12rem;
+
+        @include media(lg){
+            padding-top: 20rem;
+            margin-top: 30px;
+        }
+
+        @include media(md){
+            margin-top: 15px;
+        }
+
+        @include media(xs){
+            padding-top: 15rem;
+        }
+    }
+}
+
+/* Sections [END]
+----------------------------------- */

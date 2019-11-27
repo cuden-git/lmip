@@ -1,0 +1,156 @@
+
+/* Tools Section
+----------------------------------- */
+
+.section--download-tools{
+    background-color: $brand-four;
+
+    .section__title{
+        padding-left: 4.5rem;
+        color: $brand-two;
+
+        strong{
+            border-color: $brand-two;
+        }
+
+        &:before{
+            content: '\e819';
+            margin-top: 3px;
+        }
+    }
+}
+
+/* Tools Section [END]
+----------------------------------- */
+
+
+/* Tools Main Nav
+----------------------------------- */
+
+.tools-main-nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+
+    @include media(lg){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include media(md){
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include media(xs){
+        grid-template-columns: 1fr 1fr;
+    }
+
+    li{
+        list-style-type: none;
+        text-align: center;
+        padding: 1rem;
+        border: 2px solid $brand-two;
+        cursor: pointer;
+        color: $brand-two;
+        font-family: $font-face-three;
+        text-transform: uppercase;
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover,
+        &.active{
+            background-color: $brand-three;
+            border-color: $brand-three;
+        }
+    }
+}
+
+/* Tools Main Nav [END]
+----------------------------------- */
+
+/* Tools
+----------------------------------- */
+
+.tools{
+    padding: 4rem;
+    background-color: rgba($brand-two, 0.1);
+
+    @include media(sm){
+        padding: 2rem;
+    }
+
+    &__list{
+        order: -1;
+
+        @include media(sm){
+            order: 13;
+        }
+    }
+
+    &__content{
+        order: 13;
+
+        p{
+            font-size: 1.6rem;
+        }
+
+        @include media(sm){
+            order: -1;
+        }
+    }
+
+    &__title{
+        padding: 3rem;
+        background-color: $brand-three;
+        font-size: 2.0rem;
+        color: $brand-two;
+        text-transform: uppercase;
+        font-family: $font-face-four;
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    &__subnav{ //ul
+        margin: 0;
+        padding: 0;
+
+        li{
+            list-style-type: none;
+            cursor: pointer;
+            color: $brand-two;
+            font-size: 1.7rem;
+            line-height: 1.2;
+            font-family: $font-face-three;
+            opacity: 0.6;
+            margin-bottom: 1.8rem;
+            transition: opacity 0.2s ease;
+
+            &:hover,
+            &.active{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__content h2,
+    &__content h3,
+    &__content h4,
+    &__content p{
+        color: $brand-two;
+    }
+
+    &__download{
+        margin-top: 3rem;
+    }
+
+}
+
+/* Tools [END]
+----------------------------------- */

@@ -1,0 +1,79 @@
+
+/* Facts Grid
+----------------------------------- */
+
+.facts{
+    margin-bottom: 0;
+    background-color: $brand-nine;
+
+    .section__title{
+        padding-left: 4.5rem;
+        color: $brand-two;
+
+        &:before{
+            content: '\e816';
+        }
+
+        strong{
+            border-color: $brand-two;
+        }
+    }
+
+    &__grid{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2px;
+
+        @include media(xs){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__grid-item{
+        list-style-type: none;
+        background-color: #2B91AD;
+        padding: 0;
+        margin: 0;
+        color: $brand-two;
+        padding: 2rem 14rem 2rem 2rem;
+        display: flex;
+        align-items: center;
+
+        @include media(md){
+            padding: 2rem;
+        }
+    }
+
+    &__image-wrap{
+        display: block;
+        margin-right: 2rem;
+        width: 60px;
+
+        @include media(xl){
+            width: 15%;
+        }
+
+        @include media(sm){
+            width: 20%;
+        }
+    }
+
+    &__the-fact{
+        font-family: $font-face-three;
+        font-size: 1.6rem;
+
+        @include media(xl){
+            width: 85%;
+        }
+
+        @include media(sm){
+            width: 80%;
+        }
+    }
+
+}
+
+/* Facts Grid [END]
+----------------------------------- */

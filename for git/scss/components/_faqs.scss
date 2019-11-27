@@ -1,0 +1,56 @@
+
+/* FAQs
+----------------------------------- */
+
+.faqs{
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $brand-two;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include media(md){
+            display: block;
+        }
+    }
+
+    &__title{
+        margin-right: 3rem;
+        margin-bottom: 0;
+        position: relative;
+        top: 4px;
+        padding-left: 4.5rem;
+
+        @include media(md){
+            margin-bottom: 2rem;
+        }
+
+        &:before{
+            content: '\e808';
+            line-height: 0;
+        }
+    }
+
+    &__subtitle{
+        margin: 0;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-family: $font-face-two;
+
+        @include media(md){
+            margin-bottom: 2rem;
+        }
+    }
+
+    .button{
+        margin-left: auto;
+    }
+}
+
+/* FAQs [END]
+----------------------------------- */

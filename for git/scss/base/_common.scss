@@ -1,0 +1,291 @@
+
+/* Common
+----------------------------------- */
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: $font-face-two;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; // Hotfix Firefox horizontal scroll issue
+    // background-color: rgba($brand-one, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    // Responsive Helper
+    // &:after{
+    //     content: '';
+    //     display: block;
+    //     width: 100px;
+    //     height: 50px;
+    //     background-color: black;
+    //     position: fixed;
+    //     top: 100px;
+    //     left: 0;
+    //     z-index: 1000;
+    //     color: black;
+    //     font-size: 2rem;
+    //     font-weight: bold;
+    //     text-align: center;
+    //
+    //     @include media(xl){
+    //         content: 'XL';
+    //         background-color: grey;
+    //     }
+    //
+    //     @include media(lg){
+    //         content: 'LG';
+    //         background-color: teal;
+    //     }
+    //
+    //     @include media(md){
+    //         content: 'MD';
+    //         background-color: yellow;
+    //     }
+    //
+    //     @include media(sm){
+    //         content: 'SM';
+    //         background-color: tomato;
+    //     }
+    //
+    //     @include media(xs){
+    //         content: 'XS';
+    //         background-color: pink;
+    //     }
+    // }
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    color: $brand-one;
+
+    &:hover{
+        color: $brand-one;
+    }
+}
+
+h1{
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-family: $font-face-two;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: $brand-one;
+
+    @include media(sm){
+        font-size: 2.5rem;
+    }
+
+    strong{
+        font-family: $font-face-four;
+    }
+}
+
+h2{
+    font-size: 2.4rem;
+    font-family: $font-face-two;
+    margin-bottom: 4rem;
+    color: $brand-one;
+    text-transform: uppercase;
+    display: inline-block;
+
+    strong{
+        font-family: $font-face-four;
+        border-bottom: 2px solid $brand-one;
+        display: inline-block;
+        padding-bottom: 0.6rem;
+
+        @include media(md){
+            padding-bottom: 0.2rem;
+            margin-bottom: 0.4rem;
+        }
+    }
+}
+
+h3{
+    font-size: 2.2rem;
+    font-family: $font-face-three;
+    margin-bottom: 1.5rem;
+    color: $brand-one;
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: 1.6rem;
+    font-family: 'Flama Bold';
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.twitter-title{
+    &:before{
+        content: '\e807';
+        font-family: 'fontello';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: $brand-six;
+    }
+}
+
+ul, ol{
+    margin-bottom: 3rem;
+    padding-left: 1.9rem;
+
+    li{
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        color: $brand-one;
+    }
+}
+
+p{
+    color: $brand-one;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-family: $font-face-two;
+
+    strong{
+        font-family: 'Flama Medium';
+    }
+
+    @include media(md){
+        font-size: 1.4rem;
+    }
+}
+
+.lead,
+.lead p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: $font-face-three;
+
+    @include media(md){
+        font-size: 1.7rem;
+    }
+
+    @include media(xs){
+        font-size: 1.5rem;
+    }
+}
+
+.legal{
+    font-size: 1.2rem;
+    color: rgba($brand-one, 0.4);
+}
+
+.colour-brand-two{
+    color: $brand-two;
+}
+
+/* Table Styles
+---------------------------------- */
+
+.table{
+    font-size: 1.4rem;
+    font-family: 'Flama Basic';
+
+    @include media(xs){
+        font-size: 1.2rem;
+    }
+}
+
+.table-bordered th{
+    border: 1px solid $brand-two;
+}
+
+.table-section-head{
+    background-color: $brand-three;
+    color: $brand-two;
+    text-align: center;
+}
+
+.table-primary{
+    background-color: $brand-six;
+    color: $brand-two;
+    font-family: 'Flama Bold';
+}
+
+.table-secondary{
+    background-color: rgba($brand-six, 0.15);
+}
+
+.table-tertiary{
+    background-color: rgba($brand-six, 0.05);
+}
+
+.table-total th,
+.table-total td{
+    font-family: 'Flama Bold';
+    font-size: 1.6rem;
+
+    @include media(xs){
+        font-size: 1.4rem;
+    }
+}
+
+.table-total td{
+    color: $brand-six;
+}
+
+/* Table Styles [END]
+---------------------------------- */
+
+.wp-block-table{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+    th{
+        font-family: 'Flama Medium';
+    }
+
+    th, td{
+        padding: 0.5rem 3rem 0.5rem 0;
+        border-bottom: 1px solid #e5e5e5;
+        vertical-align: top;
+    }
+}
+
+/* Common [END]
+----------------------------------- */
+
+/* Developer Logo
+---------------------------------- */
+
+.developer-logo img{
+    height: 120px;
+    width: auto;
+
+    @include media(xs){
+        width: 80px;
+        height: auto;
+    }
+}
+
+/* Developer Logo [END]
+---------------------------------- */
+
+div.wpcf7 .ajax-loader{
+    display: none;
+}
+
+.parallax-image{
+    height: 80rem !important;
+
+    @include media(md){
+        height: 50rem !important;
+    }
+
+    @include media(sm){
+        height: 35rem !important;
+    }
+}

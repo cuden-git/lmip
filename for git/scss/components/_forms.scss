@@ -1,0 +1,206 @@
+
+/* Forms
+--------------------------------------------------- */
+
+/* Contact Form
+------------------------- */
+.contact-form{
+    margin-bottom: 4rem;
+}
+
+/* Contact Form [END]
+------------------------- */
+
+
+/* Global Form styles
+------------------------- */
+.form{
+
+    &__acceptance{
+        background-color: rgba($brand-two, 0.5);
+        padding: 2rem 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+label{
+    font-size: 1.5rem;
+    font-family: $font-face-one;
+    width: 100%;
+}
+
+.wpcf7-form-control-wrap{
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.select-wrap{
+    position: relative;
+
+    &:after{
+        content: '\e800';
+        font-family: 'fontello';
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translate(0, -50%);
+        z-index: 1;
+        font-size: 2.0rem;
+        font-weight: bold;
+        pointer-events: none;
+    }
+
+    &--alt-reversed:after{
+        color: $brand-two;
+    }
+}
+
+.load-more{
+    text-align: center;
+    padding: 5rem 0 1rem 0;
+}
+
+.select{
+    font-size: 1.6rem;
+    font-family: $font-face-three;
+    outline: none;
+    height: 5rem;
+    border: 2px solid $brand-two;
+    padding: 1rem 4rem 1rem 1.5rem;
+
+    &--alt{
+        border-color: $brand-one;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+
+    &--alt-reversed{
+        border-color: $brand-two;
+        color: $brand-two;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+
+    option{
+        color: $brand-one;
+    }
+
+}
+
+select{
+    border: 0;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 1.4rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: $brand-two;
+}
+
+// Title select menu
+.wpcf7-form-control-wrap.Title{
+    position: relative;
+
+    &:after{
+        content: '\e800';
+        font-family: 'fontello';
+        font-size: 1.8rem;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        pointer-events: none;
+    }
+}
+
+input,
+textarea{
+    border: 0;
+    font-size: 1.5rem;
+    padding: 1.4rem;
+    width: 100%;
+    resize: none;
+}
+
+input[type="checkbox"]{
+    width: auto;
+    display: none;
+
+    + span{
+        position: relative;
+        display: inline-block;
+        margin-left: 20px;
+
+        &:before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 1px solid $brand-one;
+            display: inline-block;
+            position: absolute;
+            left: -30px;
+            top: 0;
+            border-radius: 2px;
+        }
+    }
+
+    &:checked + span:after{
+        content: '\e818';
+        font-family: 'fontello';
+        position: absolute;
+        left: -28px;
+        top: 0;
+    }
+}
+
+input[type="submit"]{
+    width: auto;
+    margin-top: 1rem;
+}
+
+input:disabled{
+    opacity: 0.2;
+    color: black;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ok{
+    border: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-family: $font-face-one;
+}
+
+div.wpcf7-validation-errors{
+    background-color: $brand-eleven;
+    color: $brand-two;
+}
+
+div.wpcf7-mail-sent-ok{
+    background-color: $brand-four;
+    color: $brand-two;
+}
+
+span.wpcf7-not-valid-tip{
+    color: $brand-eleven;
+    margin: 1rem 0 2rem;
+}
+
+/* Global Form styles [END]
+------------------------- */
+
+/* Contact Form
+------------------------- */
+
+#wpcf7-f185-p32-o1{
+    margin-top: 4rem;
+}
+
+/* Contact Form [END]
+------------------------- */
+
+/* Forms [END]
+--------------------------------------------------- */

@@ -1,0 +1,40 @@
+
+/* Video Hero
+----------------------------------- */
+
+.video-hero{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-bottom: 40%;
+    transition: padding-bottom 0.5s ease;
+
+    @media (max-height: 1200px) {
+      padding-bottom: 25%;
+    }
+
+    @include media(lg){
+        padding-bottom: 50%;
+    }
+
+    @include media(md){
+        padding-bottom: 45%;
+    }
+
+    @include media(sm){
+        padding-bottom: 56.25%;
+    }
+
+
+
+    video{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+}
+
+/* Video Hero [END]
+----------------------------------- */

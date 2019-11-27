@@ -1,0 +1,150 @@
+
+/* Site Search
+----------------------------------- */
+
+.search-output{
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    margin-top: 30px;
+
+    @include media(lg){
+        padding-top: 20rem;
+        margin-top: 30px;
+    }
+
+    @include media(md){
+        margin-top: 15px;
+    }
+
+    @include media(xs){
+        padding-top: 15rem;
+    }
+
+    &__announcment{
+        margin-bottom: 0;
+        font-family: $font-face-three;
+    }
+
+    &__term{
+        font-size: 2.4rem;
+        font-family: $font-face-four;
+        border-bottom: 1px solid $brand-one;
+        padding-bottom: 2rem;
+        margin-bottom: 0;
+    }
+
+    &__results{ //ul
+        margin: 0;
+        padding: 0;
+    }
+
+    &__results-item{ //li
+        border-bottom: 1px solid rgba($brand-one, 1);
+        list-style-type: none;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        font-family: $font-face-three;
+        font-size: 1.8rem;
+        margin: 0;
+
+        @include media(lg){
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        a{
+            display: block;
+            position: relative;
+            padding-right: 240px;
+
+            @include media(lg){
+                padding-right: 0;
+            }
+
+            &:after{
+                content: "VIEW";
+                border: 2px solid $brand-one;
+                padding: 0.8rem 8rem;
+                transition: background-color 0.2s ease, color 0.2s ease;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+
+                @include media(lg){
+                    display: none;
+                }
+            }
+
+            &:hover:after{
+                background-color: $brand-one;
+                color: $brand-two;
+            }
+        }
+    }
+}
+
+.site-search{
+    background-color: $brand-seven;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease;
+
+    @include media(lg){
+        background-color: transparent;
+        height: 130px;
+        margin-top: 2rem;
+    }
+
+    &.open{
+        height: 130px;
+    }
+
+    &__inset{
+        padding: 3rem 0 3rem 250px;
+
+        @include media(lg){
+            padding: 0;
+            border: 1px solid rgba($brand-six, 1);
+        }
+
+        div{
+            display: flex;
+        }
+
+        input[type="text"]{
+            height: 70px;
+            font-size: 1.8rem;
+            padding: 2rem;
+        }
+
+        input[type="submit"]{
+            border: 10px solid $brand-two;
+            margin: 0;
+            background-color: $brand-three;
+            color: $brand-two;
+            text-transform: uppercase;
+            font-family: $font-face-four;
+            padding-left: 4rem;
+            padding-right: 4rem;
+            transition: background-color 0.2s ease, color 0.2s ease;
+
+            @include media(lg){
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            &:hover{
+                background-color: $brand-one;
+                color: $brand-two;
+            }
+        }
+    }
+
+    label{
+        display: none;
+    }
+}
+
+/* Site Search [END]
+----------------------------------- */

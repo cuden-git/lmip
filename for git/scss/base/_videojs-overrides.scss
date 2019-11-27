@@ -1,0 +1,12 @@
+/* Video JS Overrides
+----------------------------------- */
+
+video::-webkit-media-controls-start-playback-button { display: none; }
+.video-js.vjs-controls-enabled .vjs-big-play-button { display: none; }
+.video-js.vjs-controls-enabled.vjs-paused .vjs-big-play-button { display: block; }
+
+.vjs-youtube-mobile .vjs-big-play-button { display: none!important; }
+.vjs-youtube-mobile .vjs-resize-manager { display: none!important; }
+
+/* Video JS Overrides [END]
+----------------------------------- */

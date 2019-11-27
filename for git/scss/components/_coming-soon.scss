@@ -1,0 +1,39 @@
+
+/* Coming Soon
+----------------------------------- */
+
+.coming-soon{
+    background-color: $brand-nine;
+
+    h2, h3, h4, h5, h6, p, label, a{
+        color: $brand-two;
+    }
+
+    input[type="checkbox"] + span:before{
+        border-color: $brand-two;
+    }
+
+    &__content{
+        margin-bottom: 5rem;
+    }
+
+    input[type="submit"]{
+        margin-top: 5rem;
+    }
+
+    .section__title{
+        padding-left: 4.5rem;
+
+        strong{
+            border-color: $brand-two;
+        }
+
+        &:before{
+            content: '\e804';
+        }
+    }
+
+}
+
+/* Coming Soon [END]
+----------------------------------- */

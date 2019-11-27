@@ -1,0 +1,35 @@
+
+/* Pagination
+----------------------------------- */
+
+.page-numbers{ //ul
+    text-align: center;
+    margin: 3rem 0;
+    padding: 0;
+
+    li{
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 0.2rem;
+
+        .page-numbers{
+            padding: 0.5rem 1.1rem;
+            display: inline-block;
+            border: 2px solid $brand-one;
+            font-family: $font-face-three;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+
+            &.current,
+            &:hover{
+                background-color: $brand-one;
+                color: $brand-two;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Pagination [END]
+----------------------------------- */

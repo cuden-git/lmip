@@ -1,0 +1,250 @@
+
+/* Header
+----------------------------------- */
+
+.header{
+    text-align: center;
+    background-color: $brand-two;
+    align-items: center;
+
+    &__logo{
+        width: 177px;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        background-color: $brand-ten;
+        padding: 2rem;
+        z-index: 1;
+
+        @include media(xs){
+            width: 130px;
+        }
+    }
+
+    &__collapse{
+        @include media(lg){
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100;
+            left: -110%;
+            overflow-y: scroll;
+            transition: left 0.4s ease;
+            background-color: $brand-two;
+            flex-direction: column;
+        }
+    }
+
+    &__menu-wrap{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 2.5rem 0 2rem 200px;
+
+        @include media(lg){
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 13rem 0 0;
+        }
+    }
+
+    .menu-main-menu-container{
+        margin-right: auto;
+
+        @include media(lg){
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__navigation{
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 0;
+
+        li{
+            display: inline-flex;
+            align-items: center;
+            margin: 0;
+            font-family: $font-face-one;
+            font-size: 2.4rem;
+            position: relative;
+            font-size: 1.6rem;
+
+            &:first-child{
+                display: none;
+
+                @include media(lg){
+                    display: block;
+                }
+            }
+
+            @include media(lg){
+                display: block;
+            }
+
+            a{
+                color: $brand-one;
+                padding: 1rem 2rem;
+                transition: color 0.2s ease, background-color 0.2s ease;
+
+                @include media(lg){
+                    display: block;
+                    text-align: left;
+                }
+
+                @include media(xs){
+                    padding: 1.8rem 2rem;
+                }
+
+                &:hover{
+                    text-decoration: none;
+                    color: $brand-two;
+                    background-color: $brand-five;
+                }
+            }
+
+            &.current-menu-item{
+                a{
+                    color: $brand-two;
+                    background-color: $brand-five;
+                }
+            }
+
+            &:hover ul{
+                display: block;
+            }
+
+            ul{
+                display: none;
+                position: absolute;
+                z-index: 3;
+                top: 50px;
+                left: 0;
+                box-shadow: 0 0 5px 0px rgba(0,0,0,0.25);
+                padding: 0;
+
+                li{
+                    width: auto;
+                    white-space: nowrap;
+                    background-color: $brand-two;
+                }
+            }
+        }
+    }
+
+    input#nav-toggle{
+        display: none; // Hide checkbox
+    }
+
+    @include media(lg){
+        input#nav-toggle:checked ~ .header__collapse{
+            left: 0;
+        }
+    }
+
+    .search-icon{
+        text-indent: -1000px;
+        position: relative;
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        font-weight: bold;
+
+        @include media(lg){
+            display: none;
+        }
+
+        &:hover,
+        &.active{
+            color: $brand-seven;
+        }
+
+        &:after{
+            content: '\e812';
+            font-family: 'fontello';
+            position: absolute;
+            text-indent: 0;
+            left: 2px;
+            font-size: 2.5rem;
+            line-height: 1.2;
+
+
+        }
+    }
+}
+
+/* Header [END]
+----------------------------------- */
+
+/* Hamburger Toggle
+----------------------------------- */
+
+.header__nav-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 36px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1002;
+    background-color: $brand-two;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    display: none;
+
+    @include media(lg){
+        display: block;
+        top: 40px;
+        right: 40px;
+    }
+
+    @include media(md){
+        display: block;
+        top: 25px;
+        right: 25px;
+    }
+}
+
+.spinner {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: $brand-six;
+}
+
+.horizontal,
+.diagonal.part-1,
+.diagonal.part-2{
+    position: relative;
+    transition: all 0.3s;
+    float: left;
+    margin-top: 5px;
+}
+
+.diagonal.part-1 {
+    margin-top: 0;
+}
+
+#nav-toggle:checked ~ .header__nav-toggle > .horizontal {
+    opacity: 0;
+}
+
+#nav-toggle:checked ~ .header__nav-toggle > .diagonal.part-1 {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+
+#nav-toggle:checked ~ .header__nav-toggle > .diagonal.part-2 {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* Hamburger Toggle [END]
+----------------------------------- */

@@ -1,0 +1,130 @@
+
+/* Testimonial Grid
+----------------------------------- */
+
+// .testimonial-grid{
+//
+//     .esg-grid .mainul>li{
+//         margin-bottom: 2rem;
+//     }
+//
+//     .esg-entry-media{
+//         display: none;
+//     }
+//
+//     .esg-entry-content{
+//         padding-left: 80px;
+//
+//         &:before{
+//             content: 'ICON';
+//             position: absolute;
+//             left: 0;
+//             top: 0;
+//         }
+//     }
+//
+//     .esg-content{
+//         padding-top: 30px !important;
+//         padding-bottom: 30px !important;
+//
+//         &:before{
+//             content: '“';
+//             font-size: 5.0rem;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//         }
+//
+//         &:after{
+//             content: '”';
+//             font-size: 5.0rem;
+//             position: absolute;
+//             bottom: 0;
+//             right: 0;
+//         }
+//     }
+//
+//     .esg-grid .mainul{
+//         display: flex;
+//         flex-wrap: wrap;
+//     }
+//
+//     .esg-container .tp-esg-item{
+//         position: static;
+//     }
+//
+//     .esg-entry-media-wrapper{
+//         overflow: auto;
+//     }
+// }
+
+/* Testimonial Grid [END]
+----------------------------------- */
+
+.testimonial-grid{
+// Visual Composer Row class
+
+    ul.mainul{
+        // Essential Grid Unordered List
+        display: flex;
+        flex-wrap: wrap;
+
+        li.eg-testimonial-skin-wrapper{
+            // List Item - note bg colour is set on .esg-entry-content element
+            position: static;
+
+            div.esg-media-cover-wrapper{
+                // Div that wraps both the content and <img>
+                height: 100%;
+
+                div.esg-entry-media-wrapper{
+                    // Outermost Div around the poster <img>
+                    display: none;
+
+                    div.esg-entry-media{
+                        // Div around the poster <img>
+                        display: none;
+
+                        div.esg-media-poster{
+                            // Poster <img>
+                            display: none;
+                        }
+                    }
+                }
+
+                div.esg-overlay{
+                    // Invisible element
+                }
+
+                div.esg-entry-content{
+                    // Div around the text content
+                    padding-bottom: 20px;
+                    height: 100%;
+
+                    div.esg-content{
+                        // Text Content
+                        // background-color: red !important;
+                        height: 100%;
+                        border-bottom: 1px solid $brand-one;
+
+                        &:before,
+                        &:after{
+                            content: '"';
+                            font-size: 3.0rem;
+                            position: absolute;
+                            top: 0;
+                            left: 80px;
+                        }
+
+                        &:after{
+                            top: auto;
+                            left: auto;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

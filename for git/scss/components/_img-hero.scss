@@ -1,0 +1,54 @@
+
+/* Img Hero
+----------------------------------- */
+
+.img-hero{
+    min-height: 40rem;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 15px;
+
+    @include media(xs){
+        min-height: 30rem;
+    }
+
+    h1{
+        text-indent: -1000px;
+        position: absolute;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        width: 90%;
+        height: 100%;
+
+        @include media(xl){
+            bottom: 35%;
+        }
+
+        @include media(lg){
+            bottom: 23%;
+        }
+
+        @include media(xs){
+            bottom: -20px;
+            transform: translate(0, 0);
+        }
+
+        img{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            max-width: none;
+            transform: translate(0, -50%);
+
+            @include media(xs){
+                transform: translate(0, 0);
+                top: auto;
+                bottom: 2rem;
+            }
+        }
+    }
+}
+
+/* Img Hero [END]
+----------------------------------- */

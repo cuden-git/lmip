@@ -1,0 +1,69 @@
+
+/* Whitepaper List (Uses essential grid)
+----------------------------------------------------------------------------  */
+
+#whitepaper-list{
+
+    // Remove hidden overflow to show box shadow
+    .esg-overflowtrick{
+        overflow: visible;
+    }
+
+    // li
+    .esg-grid .mainul li.eg-white-paper-list-skin-wrapper{
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+    }
+
+    // div that wraps content within li
+    .eg-white-paper-list-skin-content{
+        background-color: $brand-two;
+        padding: 30px 30px 30px 110px;
+        float: left;
+        width: 100%;
+        clear: both;
+
+        &:before{
+            content: 'ICON';
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    // White Paper Title
+    .eg-white-paper-list-skin-element-1{
+        float: left;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    // Description
+    .eg-white-paper-list-skin-element-2{
+        float: left;
+        clear: both;
+
+        p{
+            margin: 0;
+        }
+    }
+
+    // Download button
+    .eg-white-paper-list-skin-nostyle-element-3{
+        margin-left: auto;
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        transform: translate(0, -50%);
+
+        a{
+            background-color: $brand-five;
+            padding: 10px;
+            color: $brand-two;
+        }
+    }
+
+}
+
+/* Whitepaper List [END]
+----------------------------------------------------------------------------  */

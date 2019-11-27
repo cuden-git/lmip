@@ -1,0 +1,39 @@
+
+/* Breakpoints
+----------------------------------- */
+
+@mixin media($type) {
+    @if $type == xs {
+        @media only screen and (max-width:575.98px) {
+          @content;
+        }
+    }
+    @else if $type == sm {
+        @media only screen and (max-width:767.98px) {
+          @content;
+        }
+    }
+    @else if $type == md {
+        @media only screen and (max-width:991.98px) {
+          @content;
+        }
+    }
+    @else if $type == lg {
+        @media only screen and (max-width:1199.98px) {
+          @content;
+        }
+    }
+    @else if $type == xl {
+        @media only screen and (min-width:1199.99px) {
+          @content;
+        }
+    }
+    @else if $type == xxl {
+        @media only screen and (min-width:1800px) {
+          @content;
+        }
+    }
+}
+
+/* Breakpoints [END]
+----------------------------------- */

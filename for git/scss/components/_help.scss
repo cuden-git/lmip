@@ -1,0 +1,94 @@
+
+/* Help
+----------------------------------- */
+
+.help{
+    background-color: $brand-three;
+
+    h2, h3, h4, h5, h6, p{
+        color: $brand-two;
+    }
+
+    h3{
+        font-size: 1.8rem;
+        text-transform: none;
+    }
+
+    .section__title{
+        strong{
+            border-color: $brand-two;
+        }
+    }
+
+    &__grid{
+        display: grid;
+        grid-column-gap: 100px;
+        grid-template-areas:
+            'colOneTitle colTwoTitle'
+            'colOneText colTwoText'
+            'colOneButton colTwoButton';
+
+        @include media(md){
+            grid-column-gap: 50px;
+        }
+
+        @include media(sm){
+            grid-column-gap: 30px;
+        }
+
+        @include media(xs){
+            grid-template-areas:
+            'colOneTitle'
+            'colOneText'
+            'colOneButton'
+            'colTwoTitle'
+            'colTwoText'
+            'colTwoButton';
+        }
+    }
+
+    &__col-1-title{grid-area: colOneTitle;}
+    &__col-2-title{grid-area: colTwoTitle;}
+
+    &__col-1-text{grid-area: colOneText;}
+    &__col-2-text{grid-area: colTwoText;}
+
+    &__col-1-button{grid-area: colOneButton;}
+    &__col-2-button{grid-area: colTwoButton;}
+
+    &__download{
+        margin-top: 4rem;
+        padding: 3rem 3rem 3rem 6rem;
+        display: block;
+        background-color: rgba($brand-two, 0.2);
+        font-size: 1.6rem;
+        font-family: $font-face-three;
+        color: $brand-two;
+        position: relative;
+
+        @include media(xs){
+            margin-bottom: 6rem;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        &:before{
+            content: '\e80d';
+            font-family: 'fontello';
+            font-size: 2.0em;
+            line-height: 0;
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+        }
+
+        &:hover{
+            color: $brand-two;
+        }
+    }
+}
+
+/* Help [END]
+----------------------------------- */

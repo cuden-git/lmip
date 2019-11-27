@@ -1,0 +1,24 @@
+
+/* Intro's
+----------------------------------- */
+
+.home-intro{background-image: url('/wp-content/themes/lmip/images/home-intro-bg.png');}
+.section--buy-intro{background-image: url('/wp-content/themes/lmip/images/buy-intro-bg.png');}
+.section--learn-intro{background-image: url('/wp-content/themes/lmip/images/learn-intro-bg.png');}
+.section--tell-intro{background-image: url('/wp-content/themes/lmip/images/tell-intro-bg.png');}
+
+.home-intro,
+.section--buy-intro,
+.section--tell-intro,
+.section--learn-intro{
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 26%;
+
+    @include media(sm){
+        background-image: none;
+    }
+}
+
+/* Intro's [END]
+----------------------------------- */

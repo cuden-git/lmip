@@ -1,0 +1,79 @@
+
+/* Stats Grid
+----------------------------------- */
+
+.stats{
+    margin-top: 0;
+    background-color: $brand-thirteen;
+
+    &__grid{ //ul
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 6rem;
+    }
+
+    &__grid-item{ //li
+        list-style-type: none;
+        margin: 0;
+        padding: 0 2rem 0 0;
+        width: 25%;
+        color: $brand-two;
+
+        @include media(sm){
+            width: 50%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__perc{
+        font-size: 7.5rem;
+        line-height: 1.1;
+        font-family: $font-face-four;
+        display: block;
+
+        @include media(md){
+            font-size: 6rem;
+        }
+
+        @include media(xs){
+            font-size: 4rem;
+        }
+
+        &:after{
+            content: '%';
+        }
+    }
+
+    &__title{
+        display: block;
+        text-transform: uppercase;
+        font-family: $font-face-four;
+        font-size: 2.4rem;
+
+        @include media(md){
+            font-size: 2.0rem;
+        }
+
+        @include media(md){
+            font-size: 1.8rem;
+        }
+    }
+
+    &__content{
+        display: block;
+        line-height: 1.3;
+    }
+
+    &__disclaimer{
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0;
+        color: $brand-two;
+    }
+
+}
+
+/* Stats Grid [END]
+----------------------------------- */

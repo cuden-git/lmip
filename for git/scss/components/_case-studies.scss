@@ -1,0 +1,47 @@
+
+/* Case Studies
+----------------------------------- */
+
+.section{
+
+    &--case-studies{
+        color: $brand-two;
+
+        .case-studies-img-col{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .select-wrap{
+            display: table;
+            margin-bottom: 4rem;
+
+            &:before{
+                content: '';
+                display: block;
+            }
+        }
+
+        h2, h3, h4, h5, p{
+            color: $brand-two;
+        }
+
+        .section__title{
+            color: $brand-two;
+            margin-bottom: 4rem;
+            padding-left: 4.5rem;
+
+            strong{
+                border-color: $brand-two;
+            }
+
+            &:before{
+                content: '\e805';
+            }
+        }
+    }
+}
+
+/* Case Studies [END]
+----------------------------------- */
