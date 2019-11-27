@@ -1,0 +1,1 @@
+body{background:#ff0;padding:25px}div p{color:red}@media screen and (min-width:400px){body{color:blue}}@media screen and (max-width:992px){div p{color:blue;-webkit-user-select:contain;-moz-user-select:contain;-ms-user-select:contain;user-select:contain}ul{font-size:12px;color:red}h2{font-size:20px}}

@@ -1,0 +1,27 @@
+body {
+    background: yellow;
+    padding: 25px;
+    @media screen and (min-width: 400px) {
+        color: blue;
+    }
+}
+div {
+    p {
+        color: red;
+        @media screen and (max-width: 992px) {
+            color: blue;
+            user-select: contain;
+        }
+    }
+}
+ul {
+    @media screen and (max-width: 992px) {
+        font-size: 12px;
+        color: red;
+    }
+}
+h2 {
+    @media screen and (max-width: 992px) {
+        font-size: 20px;
+    }
+}
